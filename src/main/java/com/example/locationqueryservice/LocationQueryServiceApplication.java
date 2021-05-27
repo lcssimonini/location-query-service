@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class LocationQueryServiceApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(LocationQueryServiceApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(LocationQueryServiceApplication.class, args);
+  }
 }

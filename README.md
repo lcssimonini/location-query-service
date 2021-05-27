@@ -1,0 +1,1 @@
+# location-query-service

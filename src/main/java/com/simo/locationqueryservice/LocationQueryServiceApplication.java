@@ -7,8 +7,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.core.env.Environment;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import java.net.InetAddress;
-
 @Slf4j
 @EnableSwagger2
 @EnableFeignClients
@@ -16,7 +14,7 @@ import java.net.InetAddress;
 public class LocationQueryServiceApplication {
 
   private static final String ACCESS_URLS_MESSAGE_LOG =
-      "\n\n Access URLs:\n----------------------------------------------------------\n\t External: \thttp://{}:{}{}/swagger-ui.html Profiles: {}\n----------------------------------------------------------\n";
+      "\n\n Access URLs:\n----------------------------------------------------------\n\t External: \thttp://localhost:{}{}/swagger-ui/ Profiles: {}\n----------------------------------------------------------\n";
 
   public static void main(final String[] args) {
     try {
@@ -25,7 +23,6 @@ public class LocationQueryServiceApplication {
       final Environment env = app.run().getEnvironment();
       log.info(
           ACCESS_URLS_MESSAGE_LOG,
-          InetAddress.getLocalHost().getHostAddress(),
           env.getProperty("server.port"),
           env.getProperty("server.servlet.context-path"),
           env.getActiveProfiles());

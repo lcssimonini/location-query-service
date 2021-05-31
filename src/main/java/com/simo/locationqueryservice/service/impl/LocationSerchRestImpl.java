@@ -3,11 +3,10 @@ package com.simo.locationqueryservice.service.impl;
 import com.simo.locationqueryservice.client.LocationClient;
 import com.simo.locationqueryservice.domain.City;
 import com.simo.locationqueryservice.service.LocationSearchService;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Slf4j
 @Service

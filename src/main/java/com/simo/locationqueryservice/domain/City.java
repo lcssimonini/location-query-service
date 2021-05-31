@@ -9,6 +9,7 @@ import lombok.Data;
 public class City {
 
   private String id;
+
   @JsonProperty("nome")
   private String name;
 }

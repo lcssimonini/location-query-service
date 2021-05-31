@@ -10,3 +10,11 @@ spring:
 location-service:
   url: https://servicodados.ibge.gov.br/api/v1/
 
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 10000
+

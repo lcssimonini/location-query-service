@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /locations
+
+spring:
+  application:
+    name: location-finder
+
+location-service:
+  url: https://servicodados.ibge.gov.br/api/v1/
+

@@ -6,7 +6,7 @@ plugins {
     id 'com.github.sherter.google-java-format' version '0.9'
 }
 
-group = 'com.example'
+group = 'com.simo'
 version = '0.0.1-SNAPSHOT'
 
 compileJava {
@@ -35,6 +35,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
+
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
@@ -52,3 +54,6 @@ dependencyManagement {
 test {
     useJUnitPlatform()
 }
+
+//compileJava.mustRunAfter googleJavaFormat
+

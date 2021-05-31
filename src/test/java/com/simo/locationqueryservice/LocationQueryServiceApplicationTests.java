@@ -1,4 +1,4 @@
-package com.example.locationqueryservice;
+package com.simo.locationqueryservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

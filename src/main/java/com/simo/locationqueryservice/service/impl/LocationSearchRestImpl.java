@@ -1,16 +1,15 @@
 package com.simo.locationqueryservice.service.impl;
 
+import static com.simo.locationqueryservice.util.StringUtil.toLowerAndRemoveAccents;
+
 import com.simo.locationqueryservice.client.LocationClient;
 import com.simo.locationqueryservice.domain.City;
 import com.simo.locationqueryservice.service.LocationSearchService;
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.stream.Collectors;
-
-import static com.simo.locationqueryservice.util.StringUtil.toLowerAndRemoveAccents;
 
 @Slf4j
 @Service

@@ -1,8 +1,8 @@
 package com.simo.locationqueryservice.util;
 
-import lombok.experimental.UtilityClass;
-
 import static org.apache.commons.lang3.StringUtils.stripAccents;
+
+import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public class StringUtil {

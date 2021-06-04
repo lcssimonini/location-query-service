@@ -2,14 +2,13 @@ package com.simo.locationqueryservice.resource;
 
 import com.simo.locationqueryservice.domain.City;
 import com.simo.locationqueryservice.service.LocationSearchService;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @Slf4j
 @RestController
@@ -21,6 +20,7 @@ public class CityResource {
 
   @GetMapping("/{stateInitials}")
   public List<City> citiesByState(@PathVariable("stateInitials") String stateInitials) {
+    //    return Collections.singletonList(City.builder().id("5300108").name("Brasília").build());
     return locationSearchService.citiesByState(stateInitials);
   }
 }

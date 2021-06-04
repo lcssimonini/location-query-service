@@ -41,7 +41,7 @@ repositories {
 }
 
 ext {
-    set('springCloudVersion', "2020.0.3-SNAPSHOT")
+    set('springCloudVersion', "2020.0.3")
     set('testcontainersVersion', "1.15.3")
 }
 
@@ -89,6 +89,10 @@ spotless {
 }
 
 build.dependsOn(spotlessApply)
+
+contractTest {
+    useJUnitPlatform()
+}
 
 test {
     finalizedBy jacocoTestReport

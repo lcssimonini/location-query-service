@@ -16,9 +16,11 @@ plugins {
     id "jacoco"
     id "com.diffplug.spotless" version "5.12.5"
     id "org.sonarqube" version "3.2.0"
+    id 'maven-publish'
 }
 
 apply plugin: 'spring-cloud-contract'
+
 
 group = 'com.simo'
 version = '0.0.1-SNAPSHOT'
@@ -35,6 +37,7 @@ configurations {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven { url 'https://repo.spring.io/snapshot' }
     maven { url 'https://repo.spring.io/milestone' }
@@ -85,6 +88,20 @@ spotless {
         googleJavaFormat()
         indentWithSpaces()
         trimTrailingWhitespace()
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.simo'
+            artifactId = 'locationqueryservice'
+            version = '0.0.1-SNAPSHOT'
+            from components.java
+            artifact verifierStubsJar {
+                classifier 'stubs'
+            }
+        }
     }
 }
 

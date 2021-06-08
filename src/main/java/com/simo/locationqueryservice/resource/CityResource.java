@@ -1,5 +1,7 @@
 package com.simo.locationqueryservice.resource;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+
 import com.simo.locationqueryservice.domain.City;
 import com.simo.locationqueryservice.service.LocationSearchService;
 import java.util.List;
@@ -18,7 +20,7 @@ public class CityResource {
 
   private final LocationSearchService locationSearchService;
 
-  @GetMapping("/{stateInitials}")
+  @GetMapping(value = "/{stateInitials}", produces = APPLICATION_JSON_VALUE)
   public List<City> citiesByState(@PathVariable("stateInitials") String stateInitials) {
     //    return Collections.singletonList(City.builder().id("5300108").name("Brasília").build());
     return locationSearchService.citiesByState(stateInitials);

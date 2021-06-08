@@ -10,6 +10,8 @@ spring:
 location-service:
   url: https://servicodados.ibge.gov.br/api/v1/
 
+postal-code-service:
+  url: https://viacep.com.br/ws/
 
 feign:
   client:

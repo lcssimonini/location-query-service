@@ -11,3 +11,5 @@ request:
 response:
   status: 200
   bodyFromFile: dfResponse.json
+  headers:
+    Content-Type: application/json
